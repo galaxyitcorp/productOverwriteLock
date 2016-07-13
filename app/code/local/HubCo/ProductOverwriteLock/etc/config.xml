@@ -5,4 +5,22 @@
 			<version>0.0.1</version>
 		</HubCo_ProductOverwriteLock>
 	</modules>
+	<global>
+		<models>
+			<hubco_productoverwritelock>
+				<class>HubCo_ProductOverwriteLock_Model</class>
+			</hubco_productoverwritelock>
+		</models>
+		<resources>
+			<hubco_productoverwritelock_setup>
+				<setup>
+					<module>HubCo_ProductOverwriteLock</module>
+					<class>Mage_Eav_Model_Entity_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</hubco_productoverwritelock_setup>
+		</resources>
+	</global>
 </config>
