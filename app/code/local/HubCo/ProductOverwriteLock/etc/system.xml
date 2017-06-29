@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--http://alanstorm.com/custom_magento_system_configuration-->
+<config>
+	<tabs>
+		<hubcoimport translate="label" module="hubco_productoverwritelock">
+			<label>HubCo Import</label>
+			<sort_order>99999</sort_order>
+		</hubcoimport>
+	</tabs>
+	<sections>
+		<productoverwritelock_options translate="label" module="hubco_productoverwritelock">
+			<label>Product Attribute Lock</label>
+			<tab>hubcoimport</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>1000</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<lock translate="label">
+					<label>LOCK</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<attributes>
+							<label>Attributes to Lock</label>
+							<frontend_type>multiselect</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+              <source_model>hubco_productoverwritelock/source_lockfields</source_model>
+						</attributes>
+					</fields>
+				</lock>
+			</groups>
+		</productoverwritelock_options>
+	</sections>
+</config>

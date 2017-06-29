@@ -6,6 +6,11 @@
 		</HubCo_ProductOverwriteLock>
 	</modules>
 	<global>
+    <helpers>
+      <hubco_productoverwritelock>
+        <class>HubCo_ProductOverwriteLock_Helper</class>
+      </hubco_productoverwritelock>
+    </helpers>
 		<models>
 			<hubco_productoverwritelock>
 				<class>HubCo_ProductOverwriteLock_Model</class>
@@ -23,4 +28,25 @@
 			</hubco_productoverwritelock_setup>
 		</resources>
 	</global>
+  <adminhtml>
+    <acl>
+      <resources>
+        <admin>
+          <children>
+            <system>
+              <children>
+                <config>
+                  <children>
+                    <productoverwritelock_options>
+                      <title>Product Attribute Lock</title>
+                    </productoverwritelock_options>
+                  </children>
+                </config>
+              </children>
+            </system>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+  </adminhtml>
 </config>
